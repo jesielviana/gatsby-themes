@@ -2,9 +2,11 @@
 import { jsx, Heading } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
+import { Disqus } from 'gatsby-plugin-disqus';
 import Layout from "./layout"
 import ItemTags from "./item-tags"
 import SEO from "./seo"
+import IconTime from '../assets/time.svg'
 
 type PostProps = {
   data: {
@@ -47,17 +49,17 @@ const Post = ({ data: { post } }: PostProps) => (
     <Heading as="h1" variant="styles.h1">
       {post.title}
     </Heading>
-    <p sx={{ color: `secondary`, mt: 3, a: { color: `secondary` }, fontSize: [1, 1, 2] }}>
+    <p sx={{ display: 'flex', color: `secondary`, mt: 3, mb: 1, a: { color: `secondary` }, fontSize: [1, 1, 2] }}>
       <time>{post.date}</time>
-      {post.tags && (
+      <span sx={{ ml: 1, mr: 1 }}>·</span>
+      <IconTime sx={{ width: '1rem', mr: 1 }} />
+      {post.timeToRead && <span>{post.timeToRead} min read</span>}
+    </p>
+    {post.tags && (
         <React.Fragment>
-          {` — `}
           <ItemTags tags={post.tags} />
         </React.Fragment>
       )}
-      {post.timeToRead && ` — `}
-      {post.timeToRead && <span>{post.timeToRead} min read</span>}
-    </p>
     <section
       sx={{
         my: 5,
@@ -66,6 +68,11 @@ const Post = ({ data: { post } }: PostProps) => (
       }}
     >
       <MDXRenderer>{post.body}</MDXRenderer>
+      <Disqus 
+      identifier={post.slug.substring(1)}
+      title={post.title}
+      url={post.slug}
+    />
     </section>
   </Layout>
 )
