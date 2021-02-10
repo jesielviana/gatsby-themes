@@ -9,9 +9,14 @@ const HeaderExternalLinks = () => {
   return (
     <React.Fragment>
       {externalLinks && externalLinks.length > 0 && (
-        <div sx={{ 'a:not(:first-of-type)': { ml: 3 }, fontSize: [1, `18px`] }}>
+        <div sx={{ 'a:not(:first-of-type)': { ml: 3 }, fontSize: [1, '18px'] }}>
           {externalLinks.map(link => (
-            <TLink target='_blank' key={link.url} href={link.url}>
+            <TLink
+              target='_blank'
+              rel='noopener'
+              key={link.url}
+              href={link.url}
+            >
               {link.name}
             </TLink>
           ))}
