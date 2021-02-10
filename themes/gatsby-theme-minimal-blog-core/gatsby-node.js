@@ -86,6 +86,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       slug: String! @slugify
       title: String!
       date: Date! @dateformat
+      published: Boolean
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
       html: String! @mdxpassthrough(fieldName: "html")

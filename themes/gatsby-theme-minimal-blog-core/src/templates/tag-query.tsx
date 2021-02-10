@@ -7,7 +7,10 @@ export const query = graphql`
   query($slug: String!, $formatString: String!) {
     allPost(
       sort: { fields: date, order: DESC }
-      filter: { tags: { elemMatch: { slug: { eq: $slug } } } }
+      filter: {
+        published: { eq: true }
+        tags: { elemMatch: { slug: { eq: $slug } } }
+      }
     ) {
       nodes {
         slug
