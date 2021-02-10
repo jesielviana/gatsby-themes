@@ -8,9 +8,9 @@ module.exports = options => {
       siteTitle: 'Jesiel Viana',
       siteTitleAlt: 'Jesiel Viana',
       siteHeadline: 'Jesiel Viana',
-      siteUrl: 'https://jesielviana.com',
+      siteUrl: 'https://www.jesielviana.com',
       siteDescription: 'Jesiel Viana, engenheiro de software e professor.',
-      siteLanguage: 'pt-Br',
+      siteLanguage: 'pt-BR',
       siteImage: '/banner.jpg',
       author: '@jesielviana'
     },
