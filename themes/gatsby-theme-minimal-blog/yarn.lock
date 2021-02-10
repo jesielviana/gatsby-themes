@@ -4600,10 +4600,10 @@ isurl@^1.0.0-alpha5:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
 
-jesielviana-gatsby-theme-minimal-blog-core@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/jesielviana-gatsby-theme-minimal-blog-core/-/jesielviana-gatsby-theme-minimal-blog-core-1.0.5.tgz#0b578a4a47c32a073c7fdca51ee9255dc620ba1f"
-  integrity sha512-NrR31Z724SspnPcYlTU/nBzrh5HJ08qvBUqDSYFHSbYB7JCxpuh7UQftuBiKhktETBmNOh3LFSCOuOZ6e71xaA==
+jesielviana-gatsby-theme-minimal-blog-core@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/jesielviana-gatsby-theme-minimal-blog-core/-/jesielviana-gatsby-theme-minimal-blog-core-1.1.2.tgz#d9de02dcf600d6d194f29ff7620a11131d53526b"
+  integrity sha512-u05g0H1eTQzj72E5q9Lx/Es3x9rCZ8WgV1+eeVVyGGVCuXqeesEBJhdLizM/8r/N1rRDEWro0cRJECCAlwoP0A==
   dependencies:
     "@mdx-js/mdx" "^1.6.22"
     "@mdx-js/react" "^1.6.22"
